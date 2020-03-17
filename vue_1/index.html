@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="app">
+			<h1>{{biodata}}</h1>
+			<button v-on:click="ubah('roma',40)">ubah data</button>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+	<script type="text/javascript">
+		new Vue({
+			el  :'#app',
+			data:{
+				nama:'balung',
+				umur:90,
+
+			},
+			computed:{
+				biodata(){
+					return 'nama saya ,' + this.nama + ' umur saya ,' + this.umur;
+				},
+			},
+			methods:{
+				ubah(arg_nama,arg_umur){
+					this.nama=arg_nama;
+					this.umur=arg_umur;
+				}
+			}
+		})
+	</script>
+</body>
+</html>
