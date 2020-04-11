@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="App">
+		<button @click="tambah()">TAMBAH</button>
+		<br>
+		<span v-for="i in nomor" ><br><span v-for="b in i">{{bintang}}</span></span>
+	</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+<script type="text/javascript">
+	new Vue({
+		el:'#App',
+		data:{
+			nomor:[1,2,3,4,5,6,7,8,9],
+			bintang:'*',
+		},
+		methods:{
+			tambah(){
+				this.nomor.push(angka);
+			},
+		},
+	})
+</script>
+</body>
+</html>

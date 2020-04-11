@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue_2</title>
+	<style type="text/css">
+		.blue{
+			padding: 100px;
+			background-color: blue;
+		}
+		.red{
+			padding: 100px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="App">
+		{{nama}}
+		<br>
+		<button v-on:click='ubah("koma")'>ubah nama</button>
+		<button v-on:click=''>ubah class</button>
+		<!-- binding -->
+		<input type="" name="" v-bind:value="nama">
+		<br>
+		<br>
+		<button @click="ubahclass()">hore</button>
+		<br>
+		<br>
+		<span :class=" ? 'red' :'blue'" ></span>
+		<br>
+		<br>
+		<div>
+			<p v-if="1+1=2">konisi terpenuhi</p>
+			<p v-else>konisi tidak terpenuhi</p>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+	<script>
+		new Vue({
+			el:'#App',
+			data:{
+				nama:'hello',
+				berubah:false,
+			},
+			methods:{
+				ubah(nano){
+					this.nama=nano;
+				},
+				ubahclass(){
+					this.berubah =!this.berubah;
+				}
+			},
+
+		})
+	</script>
+</body>
+</html>

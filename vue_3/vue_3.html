@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue_3</title>
+</head>
+<body>
+	<div id="App">
+		<!-- <p v-for="(m,index) in mobil" :key='m'>{{index}}.{{m}}</p> -->
+		<!-- <span v-for="terserah in 10">{{terserah}}</span> -->
+		<button @click="tambah()">Tambah</button>
+		<div v-for="(article,index) in articles" :key="article.index">
+			<h2>{{index+1}}.{{article.title}}</h2>
+			<p>{{article.content}}</p>
+			<i>{{article.author}}</i>
+			<hr>
+		</div>
+
+	</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+<script type="text/javascript">
+	new Vue({
+		el:'#App',
+		data:{
+			mobil:['hino','honda','carry'],
+			articles:[
+				{
+					id:'1',
+					title:'heh',
+					content:'uwu',
+					author:'ee'
+				},
+				{
+					id:'2',
+					title:'hih',
+					content:'ewe',
+					author:'ii'
+				},
+				{ 
+					id:'3',
+					title:'huh',
+					content:'pep',
+					author:'pi'
+				},
+			]
+		},
+		methods:{
+			tambah(){
+				var databaru={
+					id:'1',
+					title:'hehqwqwqw',
+					content:'uqwqwwu',
+					author:'eqwqwe'
+				};
+
+				this.articles.push(databaru);
+			}
+		},
+	})
+</script>
+</body>
+</html>
